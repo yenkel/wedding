@@ -6,10 +6,10 @@ path = require('path');
 
 
 var app = express();
-mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/wedding');
+mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/wedding');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('node_modules'));
 
@@ -24,26 +24,26 @@ var smtpTransport = nodemailer.createTransport({
 });
 
 
-app.get('/',function(req,res){
-    res.sendfile('localhost:8000/sendmail.html');
+app.get('/', function(req, res) {
+    res.sendfile(process.env.CONNECTION_STRING || "mongodb://localhost/wedding/sendmail.html");
 });
-app.get('/sendmail',function(req,res){
-    var mailOptions={
-        to : req.query.to,
-        subject : req.query.subject,
-        text : req.query.text
+app.get('/sendmail', function(req, res) {
+    var mailOptions = {
+        to: req.query.to,
+        subject: req.query.subject,
+        text: req.query.text
     }
     console.log(mailOptions);
-    smtpTransport.sendMail(mailOptions, function(error, response){
-     if(error){
+    smtpTransport.sendMail(mailOptions, function(error, response) {
+        if (error) {
             console.log(error);
-        res.end("error");
-     }else{
+            res.end("error");
+        } else {
             console.log("Message sent: " + response.message);
-        res.end("sent");
-         }
-});
-// res.end("sent");
+            res.end("sent");
+        }
+    });
+    // res.end("sent");
 });
 
 
