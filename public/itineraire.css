@@ -1,0 +1,212 @@
+body{
+	background: url(sg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+	 margin: 0;
+	 padding: 0;
+	 border: none;
+	 outline: none;
+
+}
+
+/* nav-wrap */
+#nav-wrap {
+   font: 12px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+
+}
+.opaque { background-color: #333; }
+
+/* hide toggle button */
+#nav-wrap > a.mobile-btn { display: none; }
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+   background-color: white;
+   box-shadow: 0px 3px 0px #B36700;
+
+   /* center align the menu */
+   text-align: center;
+}
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	 text-decoration: none;
+   text-align: left;
+   color:  #B36700;
+   font-family: 'Dosis', sans-serif;
+   font-size: 20px;
+   background-color:transparent;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+#itineraire {
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+   height: 700px;
+}
+
+header .banner-text1 h1 {
+   font-family: 'Nothing You Could Do';
+   font-size: 90px;
+   font-weight: 100;
+   color: #B36700;
+   padding-left: 410px;
+   padding-top: 60px;
+   letter-spacing: -2px;
+   margin: 0 auto 18px auto;
+
+}
+
+header .banner-text1 a {
+  padding-left: 120px;
+  color: #B36700;
+  font-family:'Nothing You Could Do';
+}
+
+header .banner-text2 h3{
+  font: 90px/1.1em 'Raleway', sans-serif;
+  color: white;
+  padding-top: 10px;
+  letter-spacing: -2px;
+  margin: 0  18px auto;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, .8);
+  padding-left: 736px;
+
+}
+
+banner-text2{
+  max-height: 200px;
+}
+
+
+h4{
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 26px;
+  color:white;
+  font-family: cursive;
+}
+
+
+#itineraire{
+  background-color: white;
+}
+
+
+
+
+
+.span8{
+  padding-left: 400px;
+}
+
+div.highlightTextIn a:before
+{
+    transform: scale(4.2);
+}
+
+div.highlightTextOut a:hover:before, div.highlightTextIn a:hover:before
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+div.highlightTextOut a:before, div.highlightTextIn a:before
+{
+    position: absolute;
+    color: black;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+div.container
+{
+    font-family: Raleway;
+    /*margin: 0 auto;*/
+	 padding: 1em 3em;
+	text-align: center;
+  position: fixed;
+  margin-left: 115px;
+
+}
+
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.serviceBox{text-align: center;margin-top: 60px;position: relative;z-index: 1; margin-bottom: 21px;}
+.serviceBox .service-icon{width: 78px;height: 78px;border-radius:3px;background: #fff;margin: 0 auto;position: absolute;top: -34px;left: 0;right: 0;z-index: 1;transition: all 0.3s ease-out 0s;}
+.serviceBox:hover .service-icon{transform: rotate(45deg);}
+.serviceBox .service-icon span{display: inline-block;width: 60px;height: 60px;line-height: 60px;border-radius:3px;background: royalblue;font-size: 30px;color: #fff;margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;transition: all 0.3s ease-out 0s;}
+.serviceBox .service-icon span i{transition: all 0.3s ease-out 0s;}
+.serviceBox:hover .service-icon span i{transform: rotate(-45deg);}
+.serviceBox .service-content{background: #fff;border: 2px solid #e7e7e7;border-radius: 3px;padding: 140px 15px;position: relative;}
+.serviceBox .service-content:before{content: "";display: block;width: 80px;height: 80px;border: 1px solid #e7e7e7;border-radius: 3px;margin: 0 auto;position: absolute;top: -37px;left: 0;right: 0;z-index: -1;transition: all 0.3s ease-out 0s;}
+.serviceBox:hover .service-content:before{transform: rotate(45deg);}
+.serviceBox .title{font-size: 27px;font-weight: 500;color: #324545;text-transform: uppercase;margin: 0 0 25px 0;position: relative;transition: all 0.3s ease-out 0s;}
+.serviceBox:hover .title{color: royalblue;}
+.serviceBox .description{font-size: 20px;font-weight: 500;line-height: 33px;margin-bottom: 0;}
+.serviceBox .read-more{display: block;width: 40px;height: 40px;line-height: 38px;border-radius: 50%;background: #fff;border: 1px solid #e7e7e7;font-size: 14px;color: #c4c2c2;margin: 0 auto;position: absolute;bottom: -17px;left: 0; right: 0;transition: all 0.3s ease-out 0s;}
+.serviceBox .read-more:hover{border: 1px solid #727cb6;color: #727cb6;text-decoration: none;}
+.serviceBox.green .service-icon span{ background:lightpink; }
+.serviceBox.blue .service-icon span{ background: #3498db; }
+.serviceBox.orange .service-icon span{ background: #e67e22; }
+.serviceBox.green:hover .title{ color:lightpink; }
+.serviceBox.blue:hover .title{ color: #3498db; }
+.serviceBox.orange:hover .title{ color: #e67e22; }
+
+.serviceBox:hover .read-more{border: 1px solid royalblue;color: royalblue;}
+.serviceBox.green:hover .read-more{border: 1px solid lightpink;color:lightpink;}
+.serviceBox.blue:hover .read-more{border: 1px solid #3498db;color: #3498db;}
+.serviceBox.orange:hover .read-more{border: 1px solid #e67e22;color: #e67e22;}

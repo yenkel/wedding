@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shannon & Gab CONTACT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header id="home">
+      <div class="container gray highlightTextIn">
+             <a alt="ACCEUIL" href="index.html" style="color:dimgrey;">ACCEUIL</a>
+             <a alt="PROGRAMME" href="programme.html" style="color:dimgrey;">PROGRAMME</a>
+             <a alt="CONTACT" href="contact.html" style="color:dimgrey;">CONTACT</a>
+             <a alt="PHOTOS" href="photos.html" style="color:dimgrey;">PHOTOS</a>
+     </div>
+    <section id="contact" class="content-section text-center">
+
+            <div class="contact-section">
+                <div class="container1">
+                  <h2 style="font-family: 'opensans-bold', sans-serif; color:lightsalmon; font-family:Raleway; font-size:32px;">Repondez Nous</h2>
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <form class="form-horizontal">
+                        <div class="form-group">
+                        <input id="to" value="gabmimouni@gmail.com" type="hidden"/>
+                          <label for="exampleInputName2" style="color:dimgrey; font-family:Raleway; font-size:18px;">Nom</label>
+                          <input id="subject" type="text" class="form-control" id="exampleInputName2" placeholder="Votre Nom">
+                        </div>
+                        <div class="form-group ">
+                          <label for="exampleInputText" style="color:dimgrey; font-family:Raleway; font-size:18px;">Votre Message</label>
+                         <textarea id="content" class="form-control" placeholder="Oui,Non. Nous serons 3,4,5..."></textarea>
+                        </div>
+                        <button onclick="myFunction()" id="email" type="submit" class="btn btn-default" style="color:dimgrey; font-family:Raleway; font-size:18px; background-color: white; border-color: lightsalmon;">Send</button>
+
+                      <script>
+                         function myFunction() {
+                              alert("Message envoye :)))) ");
+                              alert("Merci de ta participation ");
+                               }
+                      </script>
+                        <span id="message"></span>
+                      </form>
+
+
+
+
+
+                      <hr>
+                      <footer>
+                               <div class="twelve columns">
+
+                                  <ul class="social-links">
+                                     <li><a href="https://www.facebook.com" onclick="window.open(this.href); return false;"><i class="fa fa-facebook-official" style="color:lightsalmon;" aria-hidden="true"></i></a></li>
+                                     <li><a href="https://www.calendrier-365.fr/calendrier-2017.html" onclick="window.open(this.href); return false;"><i class="fa fa-calendar" style="color:lightsalmon;" aria-hidden="true"></i></a></li>
+                                     <li><a href="http://www.easyvols.fr/" onclick="window.open(this.href); return false;"><i class="fa fa-plane" style="color:lightsalmon;" aria-hidden="true"></i></a></li>
+                                  </ul>
+
+                                  <ul class="copyright">
+                                     <li style="color:dimgrey;">Copyright 2017</li>
+                                  </ul>
+
+                               </div>
+                             </div>
+                           </div>
+                           </div>
+                         </div>
+                       </section>
+                               <script src="jquery/dist/jquery.min.js"></script>
+                               <script>
+                               $(document).ready(function(){
+                                 var from,to,subject,text;
+                                 $("#email").click(function(){
+                                    to=$("#to").val();
+                                     subject=$("#subject").val();
+                                     text=$("#content").val();
+                                     $("#message").text("Sending E-mail...Please wait");
+                                     $.get("http://localhost:8000/sendmail",{to:to,subject:subject,text:text},function(data){
+                                     if(data=="sent")
+                                     {
+
+                                         $("#message").empty().html("Email envoye");
+
+                                     }
+
+                               });
+                                 });
+                               });
+                               </script>
+  </body>
+</html>
