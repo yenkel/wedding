@@ -1,9 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
-var app = express();
 path = require('path');
 
+
+var app = express();
+mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/posts');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -45,7 +47,7 @@ app.get('/sendmail',function(req,res){
 
 
 
-
-app.listen('8000', function(){
- console.log("yallah")
-});
+app.listen(process.env.PORT || '8080');
+// app.listen('8000', function(){
+//  console.log("yallah")
+// });
