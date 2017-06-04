@@ -25,7 +25,7 @@ var smtpTransport = nodemailer.createTransport({
 
 
 app.get('/', function(req, res) {
-    res.sendfile(process.env.CONNECTION_STRING || "mongodb://localhost/sendmail.html");
+    res.sendfile(process.env.CONNECTION_STRING || 'localhost:8080/sendmail.html');
 });
 app.get('/sendmail', function(req, res) {
     var mailOptions = {
