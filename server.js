@@ -6,7 +6,7 @@ path = require('path');
 
 
 var app = express();
-mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost');
+mongoose.connect(process.env.CONNECTION_STRING||'mongodb://localhost/wedding');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
