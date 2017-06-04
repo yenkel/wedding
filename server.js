@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
+var mongoose = require('mongoose');
 path = require('path');
 
 
